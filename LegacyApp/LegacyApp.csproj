@@ -14,11 +14,13 @@
       <None Remove="Models\" />
       <None Remove="DataAccess\" />
       <None Remove="Repository\" />
+      <None Remove="Validators\" />
     </ItemGroup>
     <ItemGroup>
       <Folder Include="Models\" />
       <Folder Include="DataAccess\" />
       <Folder Include="Repository\" />
       <Folder Include="Services\" />
+      <Folder Include="Validators\" />
     </ItemGroup>
 </Project>

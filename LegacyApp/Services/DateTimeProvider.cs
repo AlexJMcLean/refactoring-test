@@ -1,14 +1,8 @@
 ﻿using System;
-namespace LegacyApp.Services;
-
-public class DateTimeProvider : IDateTimeProvider
+namespace LegacyApp.Services
 {
-	public DateTimeProvider()
-	{
-	}
-	public DateTime DateTimeNow()
-	{
-		return DateTime.Now;
-	}
+    public class DateTimeProvider : IDateTimeProvider
+    {
+        public DateTime DateTimeNow => DateTime.Now;
+    }
 }
-

@@ -1,11 +1,15 @@
 ﻿using System;
-namespace LegacyApp.DataAccess;
+using LegacyApp.Models;
 
-public class UserDataAccessProxy: IUserDataAccess
+namespace LegacyApp.DataAccess
 {
-    public void AddUser(User user)
-    {
-        UserDataAccess.AddUser(user);
-    }
-}
 
+    public class UserDataAccessProxy : IUserDataAccess
+    {
+        public void AddUser(User user)
+        {
+            UserDataAccess.AddUser(user);
+        }
+    }
+
+}

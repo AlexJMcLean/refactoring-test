@@ -1,8 +1,8 @@
 ﻿using System;
-namespace LegacyApp.Services;
-
-public interface IDateTimeProvider
+namespace LegacyApp.Services
 {
-    public DateTime DateTimeNow();
+    public interface IDateTimeProvider
+    {
+        public DateTime DateTimeNow { get; }
+    }
 }
-

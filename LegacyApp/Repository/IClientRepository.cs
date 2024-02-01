@@ -1,10 +1,11 @@
-﻿using System;
+﻿using LegacyApp;
 using LegacyApp.Models;
 
-namespace LegacyApp.Repository;
-
-public interface IClientRepository
+namespace LegacyApp.Repository
 {
-	public Client GetById(int id);
+    public interface IClientRepository
+    {
+        public Client GetById(int id);
 
+    }
 }

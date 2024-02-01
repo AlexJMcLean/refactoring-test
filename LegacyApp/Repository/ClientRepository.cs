@@ -3,40 +3,41 @@ using System.Data;
 using System.Data.SqlClient;
 using LegacyApp.Models;
 
-namespace LegacyApp.Repository;
-
-public class ClientRepository: IClientRepository
+namespace LegacyApp.Repository
 {
-    public Client GetById(int id)
+    public class ClientRepository : IClientRepository
     {
-        Client client = null;
-        var connectionString = ConfigurationManager.ConnectionStrings["appDatabase"].ConnectionString;
-
-        using (var connection = new SqlConnection(connectionString))
+        public Client GetById(int id)
         {
-            var command = new SqlCommand
-            {
-                Connection = connection,
-                CommandType = CommandType.StoredProcedure,
-                CommandText = "uspGetClientById"
-            };
+            Client client = null;
+            var connectionString = ConfigurationManager.ConnectionStrings["appDatabase"].ConnectionString;
 
-            var parametr = new SqlParameter("@clientId", SqlDbType.Int) { Value = id };
-            command.Parameters.Add(parametr);
-
-            connection.Open();
-            var reader = command.ExecuteReader(CommandBehavior.CloseConnection);
-            while (reader.Read())
+            using (var connection = new SqlConnection(connectionString))
             {
-                client = new Client
+                var command = new SqlCommand
                 {
-                    Id = int.Parse(reader["ClientId"].ToString()),
-                    Name = reader["Name"].ToString(),
-                    ClientStatus = (ClientStatus)int.Parse(reader["ClientStatus"].ToString())
+                    Connection = connection,
+                    CommandType = CommandType.StoredProcedure,
+                    CommandText = "uspGetClientById"
                 };
-            }
-        }
 
-        return client;
+                var parametr = new SqlParameter("@clientId", SqlDbType.Int) { Value = id };
+                command.Parameters.Add(parametr);
+
+                connection.Open();
+                var reader = command.ExecuteReader(CommandBehavior.CloseConnection);
+                while (reader.Read())
+                {
+                    client = new Client
+                    {
+                        Id = int.Parse(reader["ClientId"].ToString()),
+                        Name = reader["Name"].ToString(),
+                        ClientStatus = (ClientStatus)int.Parse(reader["ClientStatus"].ToString())
+                    };
+                }
+            }
+
+            return client;
+        }
     }
 }

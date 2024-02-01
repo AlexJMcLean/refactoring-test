@@ -1,8 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LegacyApp.Consumer", "LegacyApp.Consumer\LegacyApp.Consumer.csproj", "{CA784960-75EE-4EB6-808A-A54BAE4A72C5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LegacyApp", "LegacyApp\LegacyApp.csproj", "{C0E35137-EE80-4AC9-96E3-E927718A6FAB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LegacyApp.UnitTests", "LegacyApp.UnitTests\LegacyApp.UnitTests.csproj", "{12B7FD1A-07D1-45C2-AA69-C77D5E840EF8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -18,5 +21,19 @@ Global
 		{C0E35137-EE80-4AC9-96E3-E927718A6FAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C0E35137-EE80-4AC9-96E3-E927718A6FAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C0E35137-EE80-4AC9-96E3-E927718A6FAB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12B7FD1A-07D1-45C2-AA69-C77D5E840EF8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12B7FD1A-07D1-45C2-AA69-C77D5E840EF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12B7FD1A-07D1-45C2-AA69-C77D5E840EF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12B7FD1A-07D1-45C2-AA69-C77D5E840EF8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		Policies = $0
+		$0.DotNetNamingPolicy = $1
+		$1.DirectoryNamespaceAssociation = PrefixedHierarchical
+		$0.TextStylePolicy = $2
+		$2.inheritsSet = null
+		$2.scope = text/x-csharp
+		$0.CSharpFormattingPolicy = $3
+		$3.scope = text/x-csharp
 	EndGlobalSection
 EndGlobal

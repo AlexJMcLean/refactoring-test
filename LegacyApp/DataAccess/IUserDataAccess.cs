@@ -1,8 +1,10 @@
 ﻿using System;
-namespace LegacyApp.DataAccess;
+using LegacyApp.Models;
 
-public interface IUserDataAccess
+namespace LegacyApp.DataAccess
 {
-    public void AddUser(User user);
+    public interface IUserDataAccess
+    {
+        public void AddUser(User user);
+    }
 }
-

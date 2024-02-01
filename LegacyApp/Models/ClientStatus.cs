@@ -1,5 +1,7 @@
-﻿namespace LegacyApp;
-public enum ClientStatus
+﻿namespace LegacyApp.Models
 {
-    none = 0
+    public enum ClientStatus
+    {
+        none = 0
+    }
 }
