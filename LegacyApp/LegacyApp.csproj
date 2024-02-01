@@ -10,4 +10,15 @@
       <PackageReference Include="System.ServiceModel.Primitives" Version="4.8.1" />
     </ItemGroup>
 
+    <ItemGroup>
+      <None Remove="Models\" />
+      <None Remove="DataAccess\" />
+      <None Remove="Repository\" />
+    </ItemGroup>
+    <ItemGroup>
+      <Folder Include="Models\" />
+      <Folder Include="DataAccess\" />
+      <Folder Include="Repository\" />
+      <Folder Include="Services\" />
+    </ItemGroup>
 </Project>
